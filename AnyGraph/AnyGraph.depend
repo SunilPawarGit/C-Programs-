@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1598114511 source:f:\c programs\anygraph\main.cpp
+	<tchar.h>
+	<windows.h>
+	<conio.h>
+	<graphics.h>
+
+1598114534 source:f:\c programs\cpp programs\cycle graph.cpp
+

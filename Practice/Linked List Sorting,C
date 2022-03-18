@@ -1,0 +1,45 @@
+ #include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+
+struct Node
+{
+    int No;
+    struct Node *Next;
+};
+
+  /// insert sort
+void InsertSort(int num ,struct Node **first)
+{
+     struct Node *Newn=NULL;
+    Newn=(struct Node*)malloc(sizeof(struct Node));
+    Newn->No=num;
+    Newn->Next=NULL;
+        if(NULL==*first)
+    {
+        *first= Newn;
+    }
+    else
+    {
+        struct Node *temp=*first;
+        struct Node *temp2=NULL;
+        while(temp->Next != NULL)
+        {
+
+            if(temp->No <= Newn->No )
+            {
+                if(temp2->No >= Newn->No)
+                {
+                    temp->Next=Newn;
+                    Newn->Next= temp2;
+                }
+
+            }
+            temp2=temp->Next;
+            temp=temp->Next;
+
+        }
+
+
+    }
+}

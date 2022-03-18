@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<conio.h>
+
+int NonFact(int iNo)
+{
+    int iNum=0;
+
+    if(iNo <= 0)
+    {
+        return 0;
+    }
+   for(iNum = 1;iNum < iNo;iNum++)
+   {
+       if(iNo%iNum != 0)
+       {
+            printf(" %d ",iNum);
+       }
+   }
+
+}
+
+int main()
+{
+    int iValue=0;
+
+    printf("Enter Count :");
+    scanf("%d",&iValue);
+
+    NonFact(iValue);
+
+    getch();
+    return 0;
+}
+
+
+
